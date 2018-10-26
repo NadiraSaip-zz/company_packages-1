@@ -1,0 +1,16 @@
+---
+- name: Delete group
+  hosts: all
+  tasks:
+    - name: Delete group to RedHat Family
+      when: ansible_os_family == "RedHat"
+      user:
+        name: "{{ item }}"
+        state: absent
+      with_items:
+        - managers
+        - sales
+        - marketing
+        - IT
+        - NOC
+        - admins
