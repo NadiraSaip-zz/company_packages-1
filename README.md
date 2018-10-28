@@ -21,4 +21,12 @@ The configuration
 
 
 
-****install atop on
+Create file 5GB
+
+This playbook create 5Glogfile in projects. You can pull it for some project and create your template and use it.
+
+*atop_installation.yml
+
+This playbook installs on Centos/RedHat. Atop is not available on Ubuntu. It is safe to run the playbook
+
+*5Glogfile.yml I was able to create the playbook, and I created a project under my name "Roman's Project". Within this project you have atop-installation.yml file. Use it to install on Centos/Redhat Systems. Unfortunately atop is not available for Ubuntu. Please let me know if you have any questions. For more instructions please read README file.
