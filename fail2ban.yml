@@ -45,19 +45,21 @@
         block: |
           [DEFAULT]
           banaction = iptables-multiport
-          ignoreip = 208.59.68.250/24
+          ignoreip = 208.59.68.250/24            #Enter the ip IP/CIDR block to be
           bantime = 3600
           findtime = 120
           maxretry = 3
           [sshd]
           enabled  = true
+          
+          
     - name: Update Configuration on Amazon-Linux
       when: ansible_distribution == "Amazon"
       blockinfile:
         path: /etc/fail2ban/jail.conf
         block: |
           [DEFAULT]
-          ignoreip = 208.59.68.250/24
+          ignoreip = 208.59.68.250/24             #Enter the ip IP/CIDR block to be
           bantime = 3600
           findtime = 120
           maxretry = 3
@@ -68,6 +70,8 @@
                      sendmail-whois[name=SSH, dest=root, sender=fail2ban@example.com]
           logpath  = /var/log/secure
           maxretry = 3
+          
+          
     - name: Restart Fail2ban service on Amazon-Linux
       when: ansible_distribution == "Amazon"
       service:
