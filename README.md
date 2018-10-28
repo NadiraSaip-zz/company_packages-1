@@ -1,7 +1,5 @@
 ***** fail2ban service *****
-#Enter the ip IP/CIDR block to be
-
-fail2ban.yml
+#Enter the ip IP/CIDR block to be fail2ban.yml
 This playbook installs and configure fail2ban on amazon, linux and centOS7
 The requirment to install fail2ban service is epel-relese repasetory
 1. it installs epl-release on centOS7
